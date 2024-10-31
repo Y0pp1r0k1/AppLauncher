@@ -15,10 +15,15 @@ def buttonDef(name, root, text, row, column, padx, pady, Def) :
     name.bind("<Button-1>", lambda e:Def)
     
 #Entry 
-def entryDef(name, root, width, row, column) :
+def entryDef(name, root, width, row, column, padx, pady) :
 
     name = ctk.CTkEntry(root, width=width, border_width=0)
-    name.grid(row=row, column=column)
+    name.grid(row=row, column=column, padx=padx, pady=pady)
+
+#close
+def close(name) :
+
+    name.destroy()
 
 
 
