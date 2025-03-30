@@ -1,0 +1,12 @@
+,frameName,frameTitle,row,column
+0,SNS,SNS,0,0
+1,browser,ブラウザ,0,1
+2,ProgramApp,プログラミングアプリ,0,2
+3,communication,コミュニケーションサービス,0,3
+4,convenientSite,便利系サイト,0,4
+5,videoService,ビデオサービス,1,0
+6,ProgramSite,プログラミング系サイト,1,1
+7,gameSite,ゲームサイト,1,2
+8,shoppingSite,ショッピングサイト,1,3
+9,gameLauncher,ゲームランチャー,1,4
+10,gameApp,ゲームアプリ,2,0

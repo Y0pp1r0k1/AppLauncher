@@ -1,0 +1,52 @@
+,root,name,linkText,url,def
+0,ProgramApp,Blender,Blender(4.2.5 LTS),C:\Program Files\Blender Foundation\Blender 4.2\blender-launcher.exe,AppContent
+1,ProgramApp,Unity,Unity,C:\Program Files\Unity Hub\Unity Hub.exe,AppContent
+2,ProgramApp,VisualStudioCode,Visual Studio Code,C:\Users\{UserName}\AppData\Local\Programs\Microsoft VS Code\Code.exe,AppContent
+3,ProgramSite,GitHub,GitHub,https://github.com,linkContent
+4,ProgramSite,Progate,Progate,https://prog-8.com/,linkContent
+5,ProgramSite,Qiita,Qiita,https://qiita.com,linkContent
+6,ProgramSite,WebColorCode,WebColorCode,https://www.colordic.org/,linkContent
+7,ProgramSite,randomMaterialPallet,randomMaterialPallet,https://www.threebu.it/random-material-palette/,linkContent
+8,SNS,HoYoLab,HoYoLab,https://www.hoyolab.com,linkContent
+9,SNS,TikTok,TikTok,https://www.tiktok.com,linkContent
+10,SNS,X(kyuuTwitter),X(旧Twitter),https://x.com,linkContent
+11,browser,Chrome,Chrome,C:\Program Files\Google\Chrome\Application\chrome.exe,AppContent
+12,browser,Edge,Edge,C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,AppContent
+13,browser,Firefox,Firefox,C:\Program Files\Mozilla Firefox\firefox.exe,AppContent
+14,communication,Discord(apphan),Discord(App版),C:\Users\{UserName}\AppData\Local\Discord\app-1.0.9180\Discord.exe,AppContent
+15,communication,Discord(webhan),Discord(Web版),https://discord.com/channels/@me,linkContent
+16,communication,LINEApp,LINEApp,C:\Users\{UserName}\AppData\Local\LINE\bin\LineLauncher.exe,AppContent
+17,communication,Slack(Apphan),Slack(App版),C:\Users\{UserName}\AppData\Local\slack\slack.exe,AppContent
+18,communication,Slack(webhan),Slack(Web版),https://app.slack.com/client,linkContent
+19,convenientSite,ILoveIMG,ILoveIMG,https://www.iloveimg.com/ja,linkContent
+20,convenientSite,ILovePDF,ILovePDF,https://www.ilovepdf.com/ja,linkContent
+21,convenientSite,Pinterest,Pinterest,https://jp.pinterest.com/,linkContent
+22,convenientSite,URLShortener,URLShortener,https://tinyurl.com/app,linkContent
+23,convenientSite,YahooChiebukuro,Yahoo知恵袋,https://chiebukuro.yahoo.co.jp/,linkContent
+24,convenientSite,aconvert,aconvert,https://www.aconvert.com/jp/,linkContent
+25,gameApp,AimLabs,AimLabs,C:\program Files (x86)\steam\steamapps\common\Aim Lab\AimLab_tb.exe,AppContent
+26,gameApp,ApexLegends,ApexLegends,C:\Program Files (x86)\Steam\steamapps\common\Apex Legends\r5apex.exe,AppContent
+27,gameApp,OverWatch2,OverWatch2,C:\Program Files (x86)\Steam\steamapps\common\Overwatch\Overwatch.exe,AppContent
+28,gameApp,VALORANT,VALORANT,C:\Riot Games\Riot Client\RiotClientServices.exe --launch-product=valorant --launch-patchline=live,AppContent
+29,gameApp,XDefiant,XDefiant,C:\Program Files (x86)\Ubisoft\Ubisoft Game Launcher\games\XDefiant\XDefiant.exe,AppContent
+30,gameApp,osu!(classic),osu!(Classic),C:\Users\{UserName}\AppData\Local\osu!\osu!.exe,AppContent
+31,gameLauncher,EpicGames,EpicGames,C:\Program Files (x86)\Epic Games\Launcher\Portal\Binaries\Win64\EpicGamesLauncher.exe,AppContent
+32,gameLauncher,HoyoPlay,HoyoPlay,C:\Program Files\HoYoPlay\launcher.exe,AppContent
+33,gameLauncher,Riot Client,Riot Client,C:\Riot Games\Riot Client\RiotClientServices.exe,AppContent
+34,gameLauncher,Steam,Steam,C:\Program Files (x86)\Steam\steam.exe,AppContent
+35,gameLauncher,Ubisoft,Ubisoft,C:\Program Files (x86)\Ubisoft\Ubisoft Game Launcher\UbisoftConnect.exe,AppContent
+36,gameSite,GenshinBuildCard,Genshin BuildCard,https://artifacter.neody.land/ja-JP/genshin/,linkContent
+37,gameSite,HSRBuildCard,HSR BuildCard,https://artifacter.neody.land/ja-JP/hsr/,linkContent
+38,gameSite,op.gg,OP.GG,https://op.gg,linkContent
+39,gameSite,tracker.gg,tracker.gg,https://tracker.gg/,linkContent
+40,shoppingSite,Amazon,Amazon,https://www.amazon.co.jp,linkContent
+41,shoppingSite,Rakuten,Rakuten,https://www.rakuten.co.jp/,linkContent
+42,shoppingSite,ZOZO TOWN,ZOZO TOWN,https://zozo.jp/,linkContent
+43,shoppingSite,kakaku.com,価格.com,https://kakaku.com/,linkContent
+44,shoppingSite,yahooshopping,Yahooショッピング,https://shopping.yahoo.co.jp/,linkContent
+45,videoService,Hulu,Hulu,https://www.hulu.jp,linkContent
+46,videoService,Netflix,Netflix,https://www.netflix.com/jp/,linkContent
+47,videoService,PrimeVideo,PrimeVideo,https://www.amazon.co.jp/gp/video/storefront/ref=atv_hm_hom_legacy_redirect?contentId=IncludedwithPrime&contentType=merch&merchId=IncludedwithPrime,linkContent
+48,videoService,TVer,TVer,https://tver.jp,linkContent
+49,videoService,Twitch,Twitch,https://www.twitch.tv,linkContent
+50,videoService,Youtube,Youtube,https://www.youtube.com,linkContent

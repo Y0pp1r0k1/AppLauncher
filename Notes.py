@@ -1,9 +1,19 @@
 import customtkinter as CTK
-from pathlib import Path
+import pandas as pd
 
-import CustomLinkDefs as CLD
-import CTkDefs as defs
- 
+import modules.CustomLinkDefs as CLD
+import modules.CTkDefs as defs
+import modules.CSVReader as CSVReader
+from modules.gridSystem import gridSystem
+from modules.CSVReader import settingCSVReader as setting
+
+
+#フォントサイズ・フォントファミリーの取得+変数への代入
+font = setting("fontFamily")
+lFontSize = setting("linkFontSize")
+
+setting_csv_path = CSVReader.return_true_csv_path("setting")
+
 
 def NotesWindow() :
 
@@ -15,41 +25,86 @@ def NotesWindow() :
     NotesWindow.focus_force()
     NotesWindow.attributes("-topmost", True)
 
+    gridSystem.resetGrid("row")
+    gridSystem.resetGrid("column")
 
     #注意事項のテキストたち
-    defs.labelDef("label", NotesWindow, "重要なお知らせ", 0, 0, CTK.W, "HGS創英角ゴシックUB", 25, 10, 10)
+    defs.labelDef("label", NotesWindow, "重要なお知らせ", "w", 25, 10, 10)
 
-    defs.labelDef("label", NotesWindow, "この度は当アプリをご利用いただきありがとうございます。突然ですが、お知らせになります。", 1, 0, CTK.W, "游ゴシック", 15, 20, 5)
-    
-    defs.labelDef("label", NotesWindow, "現在、このアプリは制作進行中であり、未実装の機能を一時的に使用不可能な状態にしています。", 2, 0, CTK.W, "游ゴシック", 15, 20, 5)
-    
-    defs.labelDef("label", NotesWindow, "以下のものが使用不可能な機能になります。", 3, 0, CTK.W, "游ゴシック", 15, 20, 5)
-    
-    defs.labelDef("label", NotesWindow, "○ 使用不可能な機能一覧", 4, 0, CTK.W, "游ゴシック", 15, 20, 5)
-    
-    defs.labelDef("label", NotesWindow, "● ユーザー機能全般", 5, 0, CTK.W, "游ゴシック", 15, 50, 5)
+    defs.labelDef("label", NotesWindow, "この度は当アプリをご利用いただきありがとうございます。突然ですが、お知らせになります。", "w", 15, 20, 5)
 
-    defs.labelDef("label", NotesWindow, "● 設定", 6, 0, CTK.W, "游ゴシック", 15, 50, 5)
+    defs.labelDef("label", NotesWindow, "現在、このアプリは一時的に完成した状態であるため、今後以下の機能を実装しようと思っています。", "w", 15, 20, 5)
 
-    defs.labelDef("label", NotesWindow, "● リンクのカスタム機能", 7, 0, CTK.W, "游ゴシック", 15, 50, 5)
+    defs.labelDef("label", NotesWindow, "○ 実装予定の機能一覧", "w", 15, 30, 5)
 
-    defs.labelDef("label", NotesWindow, "これらの機能は今後実装していく予定です。ご理解の程、よろしくお願い致します", 8, 0, CTK.W, "游ゴシック", 15, 30, 5)
-    
-    defs.labelDef("label", NotesWindow, "最新情報や更新情報は以下のリンクから確認可能です。ぜひご覧ください。", 9, 0, CTK.W, "游ゴシック", 15, 30, 5)
+    defs.labelDef("label", NotesWindow, "● アイコン機能（アプリ・Webサイトのアイコンを文字と一緒に表示させる機能）", "w", 15, 50, 5)
 
-    CLD.linkContent2("link", NotesWindow, "GitHub : https://github.com/Y0pp1r0k1/FavoriteLinks", 10, 0, 200, 5, "https://github.com/Y0pp1r0k1/FavoriteLinks")   
-    
-    defs.labelDef("label", NotesWindow, "アプリバージョン　Ver 2.0 / 2.0最終アップデート日 2024/7/15", 11, 0, CTK.W, "游ゴシック", 15, 250, 5)
+    defs.labelDef("label", NotesWindow, "● 解像度機能 （画面の最大サイズに応じたこのアプリの解像度設定機能）", "w", 15, 50, 5)
+
+    defs.labelDef("label", NotesWindow, "その他よさそうな機能を思いついたら気分で実装していきます", "w", 15, 50, 5)
+
+    defs.labelDef("label", NotesWindow, "更新情報や使い方などは以下のリンクから確認可能です。ぜひご覧ください。", "w", 15, 20, 5)
+
+    CLD.linkContent(NotesWindow, "label", "GitHub : https://github.com/Y0pp1r0k1/AppLauncher", "https://github.com/Y0pp1r0k1/AppLauncher")
+
+    defs.labelDef("label", NotesWindow, "アプリバージョン Release 1.0 : 最終アップデート日 2025/3/14", "w", 15, 30, 5)
+
+    defs.labelDef("label", NotesWindow, "このウィンドウの表示は下記の二度と表示しないボタン、または 設定 → その他 から変更可能です", "w", 11, 50, 5)
+
+    #checkbox
+    checkbox1 = CTK.CTkCheckBox(NotesWindow, text="二度と表示しない", font=(font, 13), width=80)
+    checkbox1.grid(row=gridSystem.getGrid("row"), column=0, padx=(0, 200), pady=30, sticky="e")
+    checkbox1.bind("<Button-1>", lambda e:renewalCSV())
 
     #閉じるボタン
-    Button = CTK.CTkButton(NotesWindow, text="Close")
-    Button.grid(row=12, column=0, padx=(300, 0))
-    Button.bind("<Button-1>", lambda e:close())
+    Button = CTK.CTkButton(NotesWindow, text="agree")
+    Button.grid(row=gridSystem.getGrid("row"), column=0, padx=(0, 40), pady=30, sticky="e")
+    Button.bind("<Button-1>", lambda e:defs.close(NotesWindow))
 
-    def close() :
-        NotesWindow.destroy()
- 
- 
+    #CSVファイルの書き換え
+    def renewalCSV() :
+
+        settingCSV = pd.read_csv(setting_csv_path, index_col=0, na_values=["NaN", "Na"])
+        oldValue = settingCSV.loc["row_1", "notesShow"]
+
+        if checkbox1.get() == 1 :
+
+            settingCSV = settingCSV.replace({"notesShow" : {oldValue : "no"}})
+            settingCSV.to_csv(setting_csv_path)
+
+        else :
+
+            settingCSV = settingCSV.replace({"notesShow" : {oldValue : "yes"}})
+            settingCSV.to_csv(setting_csv_path)
+
+    #checkBoxにチェックを入れるかどうか
+    def checkCheckBox() :
+
+        settingCSV = pd.read_csv(setting_csv_path, index_col=0, na_values=["NaN", "Na"])
+
+        if settingCSV.loc["row_1", "notesShow"] == "yes" :
+
+            checkbox1.deselect()
+
+        else :
+
+            checkbox1.select()
+
+
+    checkCheckBox()
+
+#csvファイルから読み取ってこのウィンドウを起動するかしないかの確認関数
+def checkCSVFile() :
+
+    settingCSV = pd.read_csv(setting_csv_path, index_col=0, na_values=["NaN", "Na"])
+
+    if settingCSV.loc["row_1", "notesShow"] == "yes" :
+
+        NotesWindow()
+
+    else :
+
+        print("csv file is 'NO'")
 
 
 

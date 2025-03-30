@@ -1,2 +1,0 @@
-('C:\\Users\\ys082\\MyPrograms\\Python\\programs\\myLinksApp\\build\\main\\PYZ-00.pyz',
- [])

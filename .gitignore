@@ -1,0 +1,5 @@
+sample.json
+__pycache__
+.vscode
+build
+error-log
