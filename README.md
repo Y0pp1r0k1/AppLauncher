@@ -174,13 +174,13 @@ https://github.com/Y0pp1r0k1/AppLauncher/wiki
 これらの資料がなければこのアプリを作ることはできませんでした。
 資料を作っていただいた方々に感謝します。
 
-・[Python公式サイト](https://docs.python.org/ja/3.12/index.html)
-・[CustomTkinter公式サイト](https://customtkinter.tomschimansky.com/documentation/)
-・[Qiitaで参考にさせていただいた記事まとめ](https://qiita.com/Y0pp1r0k1/likes)
-・[キカガクブログさんのPandas記事](https://www.kikagaku.co.jp/kikagaku-blog/pandas-dataframe/#i-3)
-・[猩々博士さんが翻訳したCustomTkinterの入門](https://note.com/mega_gorilla/n/n6b9d7364c54e#74b06d35-285a-4be6-926b-650f69944ed1)
-・[exeファイルのアイコンをカスタムする方法](https://various-python.hatenablog.com/entry/2021/07/11/003749)
-・[おさだのホームページ よりtkinterの備忘録](https://ossa2019.stars.ne.jp/Remember/tkinter/tk1.html) \n
+・[Python公式サイト](https://docs.python.org/ja/3.12/index.html)  
+・[CustomTkinter公式サイト](https://customtkinter.tomschimansky.com/documentation/)  
+・[Qiitaで参考にさせていただいた記事まとめ](https://qiita.com/Y0pp1r0k1/likes)  
+・[キカガクブログさんのPandas記事](https://www.kikagaku.co.jp/kikagaku-blog/pandas-dataframe/#i-3)  
+・[猩々博士さんが翻訳したCustomTkinterの入門](https://note.com/mega_gorilla/n/n6b9d7364c54e#74b06d35-285a-4be6-926b-650f69944ed1)  
+・[exeファイルのアイコンをカスタムする方法](https://various-python.hatenablog.com/entry/2021/07/11/003749)  
+・[おさだのホームページ よりtkinterの備忘録](https://ossa2019.stars.ne.jp/Remember/tkinter/tk1.html)  
 ・その他AI (chatGPT, CodiumAI, etc...)
 
 ## ■ このアプリの今後
